@@ -2,123 +2,160 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 body {
-  background-color: #32120c;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", sans-serif;
-  color: white;
+	background-color: #32120c;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	color: white;
 }
 
 main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }
 
 h1 {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 20px;
-  letter-spacing: 2px;
-  text-align: center;
+	font-family: "Alfa Slab One", cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+	text-align: center;
 }
 
 .bg {
-  height: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: -1;
+	height: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: -1;
 }
 
 .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.37);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.37);
+}
+
+.text__container {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.section__text {
+	display: none;
+	flex-direction: column;
+	gap: 30px;
 }
 
 .donut__text {
-  margin: -38px auto;
-  margin-left: -4px;
-  padding-top: 8px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 92px;
-  text-shadow: 10px 7px 0px rgba(255, 255, 255, 0.15),
-    5px 4px 0px rgba(255, 255, 255, 0.25);
+	margin: -48px auto;
+	padding-top: 10px;
+	text-align: center;
+	font-weight: 800;
+	font-size: 92px;
+	text-shadow: 10px 7px 0px rgba(255, 255, 255, 0.15),
+		5px 4px 0px rgba(255, 255, 255, 0.25);
 }
 
 .button {
-  padding: 0;
-  margin: 0;
-  border: none;
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 
 .button__start {
-  font-weight: 800;
-  margin: 0 auto;
-  max-width: 140px;
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  border-radius: 20px;
-  color: #32120c;
+	font-weight: 800;
+	margin: 0 auto;
+	max-width: 140px;
+	display: flex;
+	align-items: center;
+	padding: 10px 15px;
+	border-radius: 20px;
+	color: #32120c;
 }
 
 .button__arrow {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 .social {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 10px;
-  background-color: #eae5de;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 20px 10px;
+	background-color: #eae5de;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
 }
 
 .donut__image-container {
-  position: relative;
-  margin-bottom: 20px;
+	position: relative;
+	margin-bottom: 20px;
 }
 
 .donut__img {
-  margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 .donut__img-shadow {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
 }
 
 .donut__particle {
-  position: absolute;
+	position: absolute;
 }
 
 .donut__particle-right {
-  right: -30px;
-  top: -50px;
-  rotate: -37deg;
+	right: -30px;
+	top: -50px;
+	rotate: -37deg;
 }
 
 .donut__particle-left {
-  bottom: 90px;
-  left: -40px;
-  rotate: 140deg;
+	bottom: 90px;
+	left: -40px;
+	rotate: 140deg;
+}
+
+@media screen and (max-width: 400px) {
+	.text__container .section__text:first-child {
+		display: flex;
+
+		gap: 60px;
+		margin-top: 20px;
+	}
+
+	.donut__text {
+		margin: -45px auto;
+		font-size: 75px;
+		letter-spacing: 0px;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+	.text__container .section__text:first-child {
+		display: block;
+	}
+
+	.donut__text {
+		margin: -40px auto;
+		letter-spacing: 5px;
+	}
 }
